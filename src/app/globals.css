@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #050505;
+  --color-coal: #0d0d0d;
+  --color-graphite: #161616;
+  --color-steel: #2a2a2a;
+  --color-mist: #8a8a8a;
+  --color-silver: #c8c8c8;
+  --color-bone: #f5f4f1;
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-wide: "Syncopate", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #fff;
+  color: #000;
+}
+
+@utility eyebrow {
+    @apply font-wide text-[10px] tracking-[0.35em] uppercase text-mist;
+  }
+
+@utility h-display {
+    @apply font-display font-light leading-[0.95] tracking-tight;
+  }
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-3 px-7 py-4 font-wide text-[10px] tracking-[0.3em] uppercase transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+@utility btn-light {
+    @apply btn bg-bone text-ink hover:bg-white;
+  }
+
+@utility btn-ghost {
+    @apply btn border border-white/25 text-bone hover:border-white hover:bg-white hover:text-ink;
+  }
+
+@utility field {
+    @apply w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-bone placeholder:text-white/30 focus:outline-none focus:border-white transition-colors;
+  }
+
+@utility field-label {
+    @apply block font-wide text-[9px] tracking-[0.3em] uppercase text-mist mb-1;
+  }
+
+@utility container-x {
+    @apply mx-auto w-full max-w-[1400px] px-5 md:px-10;
+  }
+
+@utility a-input {
+    @apply w-full rounded-md border border-white/15 bg-coal px-3 py-2 text-sm text-bone focus:outline-none focus:border-white/50;
+  }
+
+@utility a-label {
+    @apply block text-xs font-medium text-silver mb-1;
+  }
+
+@utility a-btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:opacity-50;
+  }
+
+@utility a-card {
+    @apply rounded-xl border border-white/10 bg-graphite p-5;
+  }
+
+select.field option {
+  background: #0d0d0d;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
+.rise-2 { animation-delay: .15s; }
+.rise-3 { animation-delay: .3s; }
