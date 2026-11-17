@@ -38,7 +38,7 @@ export default async function Book({ searchParams }: { searchParams: Promise<{ v
 
   return (
     <>
-      <PageHero
+      <PageHero slot="C15"
         eyebrow="Request to Book"
         title={<>Reserve your <em className="italic">drive.</em></>}
         intro="Select your vehicle and schedule, then send your request. Every reservation is reviewed personally by the VENO team before it is confirmed."

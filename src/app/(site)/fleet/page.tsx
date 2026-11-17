@@ -12,7 +12,7 @@ export default async function Fleet() {
   const { vehicles } = await getCatalog();
   return (
     <>
-      <PageHero
+      <PageHero slot="C9"
         eyebrow="Our Fleet"
         title={<>The <em className="italic">collection.</em></>}
         intro="Ultra-luxury and performance vehicles, available in Newport Beach for Orange County and Los Angeles."

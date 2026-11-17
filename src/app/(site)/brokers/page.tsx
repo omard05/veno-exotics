@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Brokers() {
   return (
     <>
-      <PageHero
+      <PageHero slot="C12"
         eyebrow="Brokers & Referral Partners"
         title={<>Partner with <em className="italic">VENO.</em></>}
         intro="Concierges, planners, hospitality professionals and connected individuals: apply to become a VENO referral partner and introduce your clients to our fleet."
@@ -26,7 +26,7 @@ export default function Brokers() {
               ["Refer", "Introduce your clients to VENO. Every referred reservation goes through our standard request-and-approval process."],
             ].map(([t, d], i) => (
               <li key={t} className="border-t border-white/15 pt-5">
-                <span className="font-wide text-[10px] tracking-[0.3em] text-mist">0{i + 1}</span>
+                <span className="font-wide font-semibold text-xs tracking-[0.15em] text-mist">0{i + 1}</span>
                 <h3 className="h-display mt-2 text-3xl">{t}</h3>
                 <p className="mt-2 text-sm text-silver">{d}</p>
               </li>

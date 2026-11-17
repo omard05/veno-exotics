@@ -124,7 +124,7 @@ export function BookingForm({ vehicles, promos, unavailable, today, initialSlug,
               onClick={() => i < step && setStep(i)}
               className={`w-full border-t pt-4 text-left transition-colors ${i <= step ? "border-white" : "border-white/15"} disabled:cursor-default`}
             >
-              <span className="font-wide text-[9px] tracking-[0.3em] text-mist">0{i + 1}</span>
+              <span className="font-wide font-semibold text-[11px] tracking-[0.15em] text-mist">0{i + 1}</span>
               <span className={`mt-1 block text-xs sm:text-sm ${i === step ? "text-white" : "text-mist"}`}>{s}</span>
             </button>
           </li>
@@ -160,7 +160,7 @@ export function BookingForm({ vehicles, promos, unavailable, today, initialSlug,
                         ) : (
                           <span className="h-display text-2xl">{formatMoney(v.dailyPriceCents)}</span>
                         )}
-                        <span className="block text-[10px] tracking-widest text-mist">/ DAY</span>
+                        <span className="block text-xs tracking-widest text-mist">/ DAY</span>
                       </span>
                     </label>
                   ))}

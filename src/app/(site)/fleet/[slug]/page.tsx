@@ -43,7 +43,7 @@ export default async function VehiclePage({ params }: Props) {
   return (
     <>
       <section className="relative">
-        <VehicleImage src={v.images[0]} name={v.name} subtitle={v.subtitle} priority className="h-[78svh] min-h-[480px] w-full" />
+        <VehicleImage slug={v.slug} src={v.images[0]} name={v.name} subtitle={v.subtitle} priority className="h-[78svh] min-h-[480px] w-full" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink to-transparent" />
       </section>
 
@@ -54,7 +54,7 @@ export default async function VehiclePage({ params }: Props) {
               <p className="eyebrow !text-silver">{v.category}</p>
               {v.promo && <PromoBadge title={v.promo.title} />}
             </div>
-            <h1 className="h-display mt-5 text-[clamp(3rem,8vw,7rem)]">
+            <h1 className="h-display mt-5 text-[clamp(2.4rem,6vw,5.5rem)]">
               {v.name}
               {v.subtitle && !v.name.includes(v.subtitle) && <span className="block text-mist">{v.subtitle}</span>}
             </h1>

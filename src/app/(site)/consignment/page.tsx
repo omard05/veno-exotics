@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Consignment() {
   return (
     <>
-      <PageHero
+      <PageHero slot="C11"
         eyebrow="Consignment"
         title={<>Your vehicle, <em className="italic">our fleet.</em></>}
         intro="Own a luxury or exotic vehicle? Submit it for consideration to join the VENO fleet. Share your vehicle's details below and our team will review your submission."
@@ -25,7 +25,7 @@ export default function Consignment() {
               ["Conversation", "If your vehicle is a fit, we'll contact you to discuss the details and terms directly."],
             ].map(([t, d], i) => (
               <li key={t} className="border-t border-white/15 pt-5">
-                <span className="font-wide text-[10px] tracking-[0.3em] text-mist">0{i + 1}</span>
+                <span className="font-wide font-semibold text-xs tracking-[0.15em] text-mist">0{i + 1}</span>
                 <h3 className="h-display mt-2 text-3xl">{t}</h3>
                 <p className="mt-2 text-sm text-silver">{d}</p>
               </li>

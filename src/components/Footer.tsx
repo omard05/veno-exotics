@@ -11,8 +11,8 @@ export function Footer({ s }: { s: SiteSettings }) {
       <div className="container-x grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-4">
           <Logo />
-          <p className="mt-6 font-wide text-[10px] tracking-[0.35em]">{BRAND.tagline}</p>
-          <p className="mt-2 font-display italic text-xl text-silver">{BRAND.supportingTagline}</p>
+          <p className="mt-6 font-wide font-semibold text-xs tracking-[0.15em]">{BRAND.tagline}</p>
+          <p className="mt-2 font-display font-bold italic text-xl text-silver">{BRAND.supportingTagline}</p>
           <div className="mt-6 flex gap-3">
             <a href={s.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label={`Instagram ${s.instagramHandle}`} className="grid h-10 w-10 place-items-center border border-white/20 hover:bg-white hover:text-ink transition-colors">
               <InstagramIcon />

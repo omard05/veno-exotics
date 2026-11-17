@@ -10,7 +10,7 @@ export default async function About() {
   const s = await getSettings();
   return (
     <>
-      <PageHero eyebrow="About VENO" title={<>Where luxury meets <em className="italic">performance.</em></>} />
+      <PageHero slot="C13" eyebrow="About VENO" title={<>Where luxury meets <em className="italic">performance.</em></>} />
       <section className="container-x grid gap-16 py-20 md:grid-cols-12 md:py-28">
         <div className="md:col-span-7">
           {s.aboutBody.split(/\n{2,}/).map((p, i) => (
@@ -18,7 +18,7 @@ export default async function About() {
               {p}
             </p>
           ))}
-          <p className="mt-12 font-wide text-xs tracking-[0.35em]">{BRAND.tagline}</p>
+          <p className="mt-12 font-wide font-semibold text-xs tracking-[0.15em]">{BRAND.tagline}</p>
         </div>
         <aside className="space-y-10 md:col-span-4 md:col-start-9">
           <div>

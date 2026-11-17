@@ -25,7 +25,7 @@ export function Price({ v, size = "md" }: { v: CatalogVehicle; size?: "md" | "lg
 
 export function PromoBadge({ title }: { title: string }) {
   return (
-    <span className="inline-flex items-center gap-2 bg-white px-3 py-1.5 font-wide text-[8px] font-bold tracking-[0.3em] text-ink uppercase">
+    <span className="inline-flex items-center gap-2 bg-white px-3 py-1.5 font-wide text-[11px] font-bold tracking-[0.15em] text-ink uppercase">
       {title}
     </span>
   );

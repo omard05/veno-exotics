@@ -54,19 +54,19 @@ export function AvailabilityCalendar({
           type="button"
           onClick={() => setOffset((o) => Math.max(0, o - 1))}
           disabled={offset === 0}
-          className="px-3 py-1 font-wide text-[10px] tracking-[0.3em] text-silver hover:text-white disabled:opacity-20"
+          className="px-3 py-1 font-wide font-semibold text-xs tracking-[0.15em] text-silver hover:text-white disabled:opacity-20"
           aria-label="Previous month"
         >
           ←
         </button>
-        <div className="flex gap-5 text-[10px] text-mist">
+        <div className="flex gap-5 text-xs text-mist">
           <span className="flex items-center gap-2"><i className="h-2.5 w-2.5 border border-white/40" /> Available</span>
           <span className="flex items-center gap-2"><i className="h-2.5 w-2.5 bg-white/10 [background-image:linear-gradient(135deg,transparent_45%,rgba(255,255,255,.35)_45%,rgba(255,255,255,.35)_55%,transparent_55%)]" /> Booked</span>
         </div>
         <button
           type="button"
           onClick={() => setOffset((o) => Math.min(18, o + 1))}
-          className="px-3 py-1 font-wide text-[10px] tracking-[0.3em] text-silver hover:text-white"
+          className="px-3 py-1 font-wide font-semibold text-xs tracking-[0.15em] text-silver hover:text-white"
           aria-label="Next month"
         >
           →
@@ -75,10 +75,10 @@ export function AvailabilityCalendar({
       <div className={`grid gap-8 ${months > 1 ? "sm:grid-cols-2" : ""}`}>
         {grids.map((g, gi) => (
           <div key={g.label} className={gi > 0 ? "hidden sm:block" : ""}>
-            <p className="mb-3 text-center font-wide text-[10px] tracking-[0.3em]">{g.label.toUpperCase()}</p>
+            <p className="mb-3 text-center font-wide font-semibold text-xs tracking-[0.15em]">{g.label.toUpperCase()}</p>
             <div className="grid grid-cols-7 gap-1 text-center">
               {WEEKDAYS.map((w) => (
-                <span key={w} className="py-1 text-[10px] text-mist">{w}</span>
+                <span key={w} className="py-1 text-xs text-mist">{w}</span>
               ))}
               {g.cells.map((d, i) => {
                 if (!d) return <span key={i} />;

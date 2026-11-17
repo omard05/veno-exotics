@@ -5,11 +5,11 @@
   --color-coal: #0d0d0d;
   --color-graphite: #161616;
   --color-steel: #2a2a2a;
-  --color-mist: #8a8a8a;
-  --color-silver: #c8c8c8;
+  --color-mist: #a6a6a6;
+  --color-silver: #d6d6d6;
   --color-bone: #f5f4f1;
-  --font-display: "Cormorant Garamond", "Times New Roman", serif;
-  --font-wide: "Syncopate", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-wide: "Montserrat", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -35,15 +35,15 @@ body {
 }
 
 @utility eyebrow {
-    @apply font-wide text-[10px] tracking-[0.35em] uppercase text-mist;
+    @apply font-wide text-xs font-semibold tracking-[0.18em] uppercase text-mist;
   }
 
 @utility h-display {
-    @apply font-display font-light leading-[0.95] tracking-tight;
+    @apply font-display font-extrabold leading-[1.02] tracking-[-0.02em];
   }
 
 @utility btn {
-    @apply inline-flex items-center justify-center gap-3 px-7 py-4 font-wide text-[10px] tracking-[0.3em] uppercase transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center gap-3 px-7 py-4 font-wide text-xs font-bold tracking-[0.12em] uppercase transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed;
   }
 
 @utility btn-light {
@@ -55,11 +55,11 @@ body {
   }
 
 @utility field {
-    @apply w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-bone placeholder:text-white/30 focus:outline-none focus:border-white transition-colors;
+    @apply w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-base text-bone placeholder:text-white/30 focus:outline-none focus:border-white transition-colors;
   }
 
 @utility field-label {
-    @apply block font-wide text-[9px] tracking-[0.3em] uppercase text-mist mb-1;
+    @apply block font-wide text-[11px] font-semibold tracking-[0.12em] uppercase text-mist mb-1.5;
   }
 
 @utility container-x {

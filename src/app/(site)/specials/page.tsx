@@ -15,7 +15,7 @@ export default async function Specials() {
 
   return (
     <>
-      <PageHero
+      <PageHero slot="C8"
         eyebrow="Specials"
         title={shown.length ? <>Limited-time <em className="italic">offers.</em></> : "Specials"}
       />
@@ -46,7 +46,7 @@ export default async function Specials() {
               <div className="grid gap-12 md:grid-cols-2">
                 {promoted.map((v) => (
                   <Link key={v.id} href={`/fleet/${v.slug}`} className="group block">
-                    <VehicleImage src={v.images[0]} name={v.name} subtitle={v.subtitle} className="aspect-[4/3]" />
+                    <VehicleImage slug={v.slug} src={v.images[0]} name={v.name} subtitle={v.subtitle} className="aspect-[4/3]" />
                     <div className="border-b border-white/10 py-6">
                       <p className="eyebrow">{v.category}</p>
                       <h3 className="h-display mt-2 text-4xl">
@@ -57,7 +57,7 @@ export default async function Specials() {
                         <s className="text-2xl text-mist decoration-white/60">{formatMoney(v.dailyPriceCents)}</s>
                         <span className="eyebrow">/ day</span>
                       </div>
-                      <span className="mt-6 inline-flex items-center gap-3 font-wide text-[10px] tracking-[0.3em] text-silver group-hover:text-white">
+                      <span className="mt-6 inline-flex items-center gap-3 font-wide font-semibold text-xs tracking-[0.15em] text-silver group-hover:text-white">
                         RESERVE AT THIS RATE <ArrowIcon />
                       </span>
                     </div>

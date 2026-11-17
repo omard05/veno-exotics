@@ -38,7 +38,7 @@ export function Header({ hasSpecial }: { hasSpecial: boolean }) {
             <Link
               key={n.href}
               href={n.href}
-              className={`relative font-wide text-[9px] tracking-[0.3em] uppercase transition-colors ${
+              className={`relative font-wide font-semibold text-[11px] tracking-[0.15em] uppercase transition-colors ${
                 active(n.href) ? "text-white" : "text-silver/70 hover:text-white"
               }`}
             >

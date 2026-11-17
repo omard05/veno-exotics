@@ -13,6 +13,7 @@ Built with Next.js 15 (App Router), React 19, Tailwind CSS 4, Drizzle ORM and Po
 
 | Area | Details |
 | --- | --- |
+| **Photos** | Numbered gray boxes (C1–C19) mark where photos go. See `PHOTOS.md`. |
 | **Public site** | Home, Specials, Our Fleet (+ vehicle detail pages), Experiences, Consignment, Brokers, About Us, Contact. The VENO logo links home. Responsive desktop and mobile layouts. |
 | **Request-to-book** | Choose a vehicle → pickup/return dates (availability calendar) and times → contact info → review the estimate → submit. Reservations are **never confirmed automatically**. |
 | **Notifications** | Each request is saved and emailed to `NOTIFY_EMAIL` (kareemdarwish001@gmail.com). The customer gets an acknowledgement saying it is a request, not a confirmation. |

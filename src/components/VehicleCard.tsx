@@ -9,6 +9,7 @@ export function VehicleCard({ v, large = false }: { v: CatalogVehicle; large?: b
     <Link href={`/fleet/${v.slug}`} className="group block">
       <div className="relative">
         <VehicleImage
+          slug={v.slug}
           src={v.images[0]}
           name={v.name}
           subtitle={v.subtitle}
@@ -30,7 +31,7 @@ export function VehicleCard({ v, large = false }: { v: CatalogVehicle; large?: b
         </div>
         <div className="text-right shrink-0">
           <Price v={v} />
-          <span className="mt-2 inline-flex items-center gap-2 font-wide text-[9px] tracking-[0.3em] text-silver group-hover:text-white">
+          <span className="mt-2 inline-flex items-center gap-2 font-wide font-semibold text-[11px] tracking-[0.15em] text-silver group-hover:text-white">
             VIEW <ArrowIcon />
           </span>
         </div>

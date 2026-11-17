@@ -18,7 +18,7 @@ export default async function Contact() {
   ];
   return (
     <>
-      <PageHero eyebrow="Contact" title={<>Let&apos;s get you <em className="italic">driving.</em></>} />
+      <PageHero slot="C14" eyebrow="Contact" title={<>Let&apos;s get you <em className="italic">driving.</em></>} />
       <section className="container-x grid gap-16 py-20 md:py-28 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <dl className="divide-y divide-white/10 border-y border-white/10">
